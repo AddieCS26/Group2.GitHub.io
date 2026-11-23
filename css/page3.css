@@ -82,6 +82,7 @@ nav ul {
   list-style: none;
 }
 
+/* General navigation links */
 nav a {
   font-family: var(--font-ui);
   color: var(--hills);
@@ -102,8 +103,9 @@ nav a[aria-current="page"] {
   display: inline-block;
 }
 
-/* The trigger button */
+/* Hamburger button */
 .dropbtn {
+  display: block;
   background: transparent;
   border: 2px solid var(--linen);
   color: var(--sands);
@@ -120,7 +122,7 @@ nav a[aria-current="page"] {
   background: var(--emerald-dark);
 }
 
-/* The hidden panel */
+/* Hide the menu initially */
 .dropdown-content {
   display: none;
   position: absolute;
@@ -131,28 +133,30 @@ nav a[aria-current="page"] {
   border: 2px solid var(--linen);
   border-radius: 8px;
   padding: 0.5rem 0;
-  z-index: 10;
+  z-index: 1000;
 }
 
-/* Show the panel on hover or focus */
+/* Show menu on hover or keyboard focus */
 .dropdown:hover .dropdown-content,
 .dropdown:focus-within .dropdown-content {
   display: block;
 }
 
-/* The links */
+/* Dropdown links */
 .dropdown-content a {
   display: block;
+  width: 100%;
   color: var(--sands);
   padding: 0.6rem 1rem;
   text-decoration: none;
   font-family: var(--font-ui);
+  border: none;
 }
 
 .dropdown-content a:hover,
 .dropdown-content a:focus-visible {
   background: var(--emerald-dark);
-  color: var(--yellow);
+  color: var(--sands);
 }
 
 /* Hero */
