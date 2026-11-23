@@ -1,4 +1,3 @@
-
 /* Forest Canopy stylesheet
    Palette: #43695B  #6B8D73  #A3B2A4  #EDE5D2  #D5C2A5 */
 
@@ -103,58 +102,57 @@ nav a[aria-current="page"] {
   display: inline-block;
 }
 
+/* The trigger button */
 .dropbtn {
   background: transparent;
+  border: 2px solid var(--linen);
   color: var(--sands);
+  font-size: 1.4rem;
   font-family: var(--font-ui);
-  font-size: 1.5rem;
-  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
   cursor: pointer;
-  padding: 0.25rem 0.5rem;
-  border-radius: var(--radius);
-  transition: background 0.15s;
+  transition: background 0.2s ease;
 }
 
-.dropbtn:hover {
+.dropbtn:hover,
+.dropbtn:focus-visible {
   background: var(--emerald-dark);
 }
 
+/* The hidden panel */
 .dropdown-content {
   display: none;
   position: absolute;
-  right: 0;
-  background: var(--paper);
-  min-width: 12rem;
-  border: 1px solid var(--linen);
-  border-radius: var(--radius);
-  box-shadow: 0 8px 16px rgba(31, 47, 41, 0.2);
-  z-index: 1000;
-  overflow: hidden;
+  top: 100%;
+  left: 0;
+  min-width: 180px;
+  background: var(--emerald);
+  border: 2px solid var(--linen);
+  border-radius: 8px;
+  padding: 0.5rem 0;
+  z-index: 10;
 }
 
-.dropdown-content a {
-  display: block;
-  padding: 0.75rem 1rem;
-  color: var(--ink);
-  text-decoration: none;
-  border-bottom: 1px solid var(--sands);
-}
-
-.dropdown-content a:last-child {
-  border-bottom: none;
-}
-
-.dropdown-content a:hover,
-.dropdown-content a[aria-current="page"] {
-  background: var(--sands);
-  color: var(--emerald-dark);
-  border-bottom-color: var(--sands);
-}
-
-/* Show menu when hovering or focusing inside the dropdown */
+/* Show the panel on hover or focus */
 .dropdown:hover .dropdown-content,
 .dropdown:focus-within .dropdown-content {
   display: block;
+}
+
+/* The links */
+.dropdown-content a {
+  display: block;
+  color: var(--sands);
+  padding: 0.6rem 1rem;
+  text-decoration: none;
+  font-family: var(--font-ui);
+}
+
+.dropdown-content a:hover,
+.dropdown-content a:focus-visible {
+  background: var(--emerald-dark);
+  color: var(--yellow);
 }
 
 /* Hero */
