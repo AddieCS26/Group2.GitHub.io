@@ -46,6 +46,7 @@ header {
 
 header .container {
   display: flex;
+  flex-direction: row-reverse;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 0;
@@ -217,7 +218,7 @@ tr:nth-child(even) {
 .dropdown-content {
   display: none;
   position: absolute;
-  right: 0;
+  left: 0;
   min-width: 180px;
   background: var(--paper);
   border: 1px solid var(--linen);
